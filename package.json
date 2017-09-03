@@ -23,7 +23,8 @@
     "build": "ng build --prod -scd --stats-json",
     "test": "ng test -sr -cc",
     "lint": "ng lint --type-check",
-    "e2e": "ng e2e"
+    "e2e": "ng e2e -wu=false",
+    "webdriver-update": "webdriver-manager update --versions.chrome=2.29",
   },
   "dependencies": {
     "@angular/animations": "4.3.6",
