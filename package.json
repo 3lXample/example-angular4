@@ -1,0 +1,19 @@
+{
+  "name": "example-angular4",
+  "private": true,
+  "version": "0.0.0",
+  "description": "An example of web made with Angular 4",
+  "license": "MIT",
+  "author": {
+    "name": "3lXample",
+    "url": "https://github.com/3lXample"
+  },
+  "contributors": {
+    "name": "Anisetus Elly Efendi",
+    "url": "https://github.com/3lly3fendi"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/3lXample/example-angular4.git"
+  }
+}
