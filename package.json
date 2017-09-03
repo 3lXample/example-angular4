@@ -25,6 +25,7 @@
     "lint": "ng lint --type-check",
     "e2e": "ng e2e -wu=false",
     "webdriver-update": "webdriver-manager update --versions.chrome=2.29",
+    "tsc": "tsc"
   },
   "dependencies": {
     "@angular/animations": "4.3.6",
