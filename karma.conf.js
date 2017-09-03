@@ -11,6 +11,7 @@ module.exports = function (config) {
       require('karma-jasmine-html-reporter'),
       require('karma-coverage-istanbul-reporter'),
       require('karma-htmlfile-reporter'),
+      require('karma-junit-reporter'),
       require('@angular/cli/plugins/karma')
     ],
     client:{
@@ -28,10 +29,22 @@ module.exports = function (config) {
       useCompactStyle: true,
       useLegacyStyle: true
     },
+    junitReporter: {
+      outputDir: 'build/reports/karma-junit',
+      outputFile: 'result.xml',
+      suite: 'example-angular4',
+      useBrowserName: false,
+      nameFormatter: function(browser, result) {
+        return result.description;
+      },
+      classNameFormatter: function(browser, result) {
+        return result.suite.join('.');
+      }
+    },
     angularCli: {
       environment: 'dev'
     },
-    reporters: ['progress', 'kjhtml', 'html'],
+    reporters: ['progress', 'kjhtml', 'html', 'junit'],
     port: 9876,
     colors: true,
     logLevel: config.LOG_INFO,
