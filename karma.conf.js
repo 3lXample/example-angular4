@@ -10,6 +10,7 @@ module.exports = function (config) {
       require('karma-chrome-launcher'),
       require('karma-jasmine-html-reporter'),
       require('karma-coverage-istanbul-reporter'),
+      require('karma-htmlfile-reporter'),
       require('@angular/cli/plugins/karma')
     ],
     client:{
@@ -19,10 +20,18 @@ module.exports = function (config) {
       reports: [ 'html', 'lcovonly' ],
       fixWebpackSourcePaths: true
     },
+    htmlReporter: {
+      outputFile: 'build/reports/karma-html/result.html',
+      pageTitle: 'Example Angular 4 Web Unit Tests',
+      subPageTitle: 'An example of web made with Angular 4',
+      groupSuites: true,
+      useCompactStyle: true,
+      useLegacyStyle: true
+    },
     angularCli: {
       environment: 'dev'
     },
-    reporters: ['progress', 'kjhtml'],
+    reporters: ['progress', 'kjhtml', 'html'],
     port: 9876,
     colors: true,
     logLevel: config.LOG_INFO,
