@@ -18,7 +18,8 @@ module.exports = function (config) {
       clearContext: false // leave Jasmine Spec Runner output visible in browser
     },
     coverageIstanbulReporter: {
-      reports: [ 'html', 'lcovonly' ],
+      dir: 'build/reports/karma-coverage',
+      reports: ['lcov', 'cobertura', 'text-summary'],
       fixWebpackSourcePaths: true
     },
     htmlReporter: {
