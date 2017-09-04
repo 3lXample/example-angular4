@@ -1,0 +1,17 @@
+/**
+ * example-angular4
+ * https://github.com/3lXample/example-angular4
+ *
+ * Copyright (c) 2017 3lXample (https://github.com/3lXample)
+ * Licensed under the MIT license
+ */
+:host {
+  display     : block;
+  margin      : 5px 0;
+}
+:host ul.nav li.nav-item:first-child {
+  margin-left : 15px;
+}
+:host ul.nav li.nav-item:last-child {
+  margin-right : 15px;
+}

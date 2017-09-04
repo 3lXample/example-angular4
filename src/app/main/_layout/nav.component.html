@@ -1,0 +1,17 @@
+<!--
+ * example-angular4
+ * https://github.com/3lXample/example-angular4
+ *
+ * Copyright (c) 2017 3lXample (https://github.com/3lXample)
+ * Licensed under the MIT license
+ -->
+<nav>
+  <h2 class="sr-only">Navigation</h2>
+  <ul class="nav nav-tabs">
+    <li class="nav-item" *ngFor="let menu of menus">
+      <a class="nav-link" href="#" routerLink="{{menu.href}}" routerLinkActive="active" [routerLinkActiveOptions]="{exact:true}">
+        <img *ngIf="menu.icon" src="{{menu.icon}}" width="20" height="20" alt="{{menu.iconAlt}}">{{menu.text}}
+      </a>
+    </li>
+  </ul>
+</nav>
