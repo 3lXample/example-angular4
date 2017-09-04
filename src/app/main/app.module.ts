@@ -11,6 +11,7 @@ import { BrowserModule }    from '@angular/platform-browser';
 import { AppComponent }     from './app.component';
 import { AppRoutingModule } from './app-routing.module';
 
+import { HeaderComponent }  from './_layout/header.component';
 import { FooterComponent }  from './_layout/footer.component';
 
 @NgModule({
@@ -20,6 +21,7 @@ import { FooterComponent }  from './_layout/footer.component';
   ],
   declarations: [
     AppComponent,
+    HeaderComponent,
     FooterComponent
   ],
   providers: [],
