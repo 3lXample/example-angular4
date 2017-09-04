@@ -1,0 +1,28 @@
+/**
+ * example-angular4
+ * https://github.com/3lXample/example-angular4
+ *
+ * Copyright (c) 2017 3lXample (https://github.com/3lXample)
+ * Licensed under the MIT license
+ */
+:host {
+  display: block;
+}
+:host table thead tr th:nth-child(3) {
+  text-align: center;
+}
+:host table thead tr th:nth-child(4) {
+  text-align: center;
+}
+:host table tbody tr td:nth-child(3) {
+  text-align: center;
+}
+:host table tbody tr td:nth-child(4) {
+  text-align: center;
+}
+:host table tbody tr td:nth-child(3) {
+  font-family: "SFMono-Regular", Consolas, "Liberation Mono", Menlo, Courier, monospace;
+}
+:host table tbody tr td:nth-child(4) {
+  font-family: "SFMono-Regular", Consolas, "Liberation Mono", Menlo, Courier, monospace;
+}

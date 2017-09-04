@@ -1,0 +1,47 @@
+<!--
+ * example-angular4
+ * https://github.com/3lXample/example-angular4
+ *
+ * Copyright (c) 2017 3lXample (https://github.com/3lXample)
+ * Licensed under the MIT license
+ -->
+<section>
+  <h2>{{title}}</h2>
+  <nav attr.aria-label="{{title}} Navigation">
+    <h3 class="sr-only">{{title}} Navigation</h3>
+    <div class="row">
+      <div class="col">
+        <ul class="pagination">
+          <li *ngFor="let menu of menus" class="page-item"><a class="page-link" href="" (click)="clickMenu($event, menu)">{{menu}}</a></li>
+        </ul>
+      </div>
+      <div class="col col-auto">
+        <ul class="pagination">
+          <li class="page-item"><a class="page-link">{{info}} : {{value}}</a></li>
+          <li class="page-item"><a class="page-link" href="" (click)="clickMenu($event, 'reset')">Reset</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  <article>
+    <h3 class="sr-only">{{title}} Content</h3>
+    <table class="table table-sm table-bordered table-hover">
+      <thead class="thead-inverse">
+        <tr>
+          <th>First Name</th>
+          <th>Last Name</th>
+          <th>Phone</th>
+          <th>Date of Birth</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let user of users; trackBy: trackById">
+          <td>{{user.firstName}}</td>
+          <td>{{user.lastName}}</td>
+          <td>{{user.phone}}</td>
+          <td>{{user.dob | date:'dd-MMM-yyyy'}}</td>
+         </tr>
+      </tbody>
+    </table>
+  </article>
+</section>
