@@ -5,10 +5,11 @@
   },
   "apps": [
     {
+      "name":"main",
       "root": "src",
-      "outDir": "build/dist",
+      "outDir": "build/dist/main",
       "assets": [
-        "assets",
+        "_assets",
         "favicon.ico",
         ".nojekyll"
       ],
