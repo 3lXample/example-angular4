@@ -9,6 +9,7 @@ import { NgModule }             from '@angular/core';
 import { BrowserModule }        from '@angular/platform-browser';
 
 import { ExampleComponent }     from './example.component';
+import { ExampleReversePipe }   from './example-reverse.pipe';
 import { ExampleRoutingModule } from './example-routing.module';
 
 @NgModule({
@@ -17,7 +18,8 @@ import { ExampleRoutingModule } from './example-routing.module';
     ExampleRoutingModule
   ],
   declarations: [
-    ExampleComponent
+    ExampleComponent,
+    ExampleReversePipe
   ],
   providers: [],
   bootstrap: [ExampleComponent]

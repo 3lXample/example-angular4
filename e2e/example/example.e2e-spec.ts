@@ -16,7 +16,7 @@ describe('example page', () => {
 
   it('Should display header', () => {
     page.navigateTo();
-    expect(page.getHeaderText()).toBe('elpmaxE 4 ralugnA');
+    expect(page.getHeaderText()).toBe('Angular 4 Example');
   });
 
 });

@@ -5,12 +5,17 @@
  * Copyright (c) 2017 3lXample (https://github.com/3lXample)
  * Licensed under the MIT license
  */
-import { DebugElement }                     from '@angular/core';
-import { async, ComponentFixture, TestBed } from '@angular/core/testing';
-import { By }                               from '@angular/platform-browser';
-import { RouterTestingModule }              from '@angular/router/testing';
+import { DebugElement, Pipe, PipeTransform } from '@angular/core';
+import { async, ComponentFixture, TestBed }  from '@angular/core/testing';
+import { By }                                from '@angular/platform-browser';
+import { RouterTestingModule }               from '@angular/router/testing';
 
-import { ExampleComponent }                 from './example.component';
+import { ExampleComponent }                  from './example.component';
+
+@Pipe({ name: 'exampleReverse' })
+class MockExampleReversePipe implements PipeTransform {
+  transform(value: any, ...args: any[]): any { return 'ExampleReversePipe'; }
+}
 
 describe('ExampleComponent', () => {
   let comp:     ExampleComponent;
@@ -21,7 +26,7 @@ describe('ExampleComponent', () => {
   beforeEach(async(() => {
     TestBed.configureTestingModule({
       imports: [RouterTestingModule],
-      declarations: [ExampleComponent]
+      declarations: [ExampleComponent, MockExampleReversePipe]
     }).compileComponents();
   }));
 
@@ -44,7 +49,7 @@ describe('ExampleComponent', () => {
   });
 
   it('Should render title in a h1 tag', () => {
-    expect(elHeader.textContent).toBe('elpmaxE 4 ralugnA');
+    expect(elHeader.textContent).toBe('ExampleReversePipe');
   });
 
 });
