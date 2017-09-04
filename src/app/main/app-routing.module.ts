@@ -13,10 +13,11 @@ import { PaginationComponent }  from './pagination/pagination.component';
 import { AdditionComponent }    from './addition/addition.component';
 
 const routes: Routes = [
-  { path: '',           component: HomeComponent, pathMatch: 'full' },
-  { path: 'pagination', component: PaginationComponent },
-  { path: 'addition',   component: AdditionComponent },
-  { path: '**',         redirectTo: '/' }
+  { path: '',            component: HomeComponent, pathMatch: 'full' },
+  { path: 'pagination',  component: PaginationComponent },
+  { path: 'addition',    component: AdditionComponent },
+  { path: 'subtraction', component: HomeComponent },
+  { path: '**',          redirectTo: '/' }
 ];
 
 @NgModule({
