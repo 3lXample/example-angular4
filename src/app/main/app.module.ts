@@ -15,6 +15,8 @@ import { HeaderComponent }  from './_layout/header.component';
 import { NavComponent }     from './_layout/nav.component';
 import { FooterComponent }  from './_layout/footer.component';
 
+import { HomeComponent }    from './home/home.component';
+
 @NgModule({
   imports: [
     BrowserModule,
@@ -24,7 +26,8 @@ import { FooterComponent }  from './_layout/footer.component';
     AppComponent,
     HeaderComponent,
     NavComponent,
-    FooterComponent
+    FooterComponent,
+    HomeComponent,
   ],
   providers: [],
   bootstrap: [AppComponent]
