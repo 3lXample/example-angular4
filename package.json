@@ -26,7 +26,8 @@
     "e2e": "ng e2e -wu=false",
     "webdriver-update": "webdriver-manager update --versions.chrome=2.29",
     "tsc": "tsc",
-    "example-build": "npm run build -- --app=example -bh=/example/ -d=/example/"
+    "example-build": "npm run build -- --app=example -bh=/example/ -d=/example/",
+    "example-e2e": "npm run e2e -- --app=example -sp=e2e/example/**/*.e2e-spec.ts"
   },
   "dependencies": {
     "@angular/animations": "4.3.6",
