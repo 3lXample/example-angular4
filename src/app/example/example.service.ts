@@ -13,4 +13,7 @@ export class ExampleService {
   // Add Constants
   static readonly exampleConstant: string = 'built by Anisetus Elly Efendi';
 
+  // Add Values
+  exampleValue = 'Angular 4.3.6';
+
 }
