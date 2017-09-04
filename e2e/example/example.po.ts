@@ -77,4 +77,48 @@ export class ExamplePage {
     return this.getAppExampleTemplateContentEl().getText();
   }
 
+  getHeaderViewEl() {
+    return element(by.css('h1#header-view'));
+  }
+
+  getHeaderViewText() {
+    return this.getHeaderViewEl().getText();
+  }
+
+  getLink1El() {
+    return element(by.css('a#link1'));
+  }
+
+  clickLink1() {
+    browser.actions().click(this.getLink1El()).perform();
+  }
+
+  getLink2El() {
+    return element(by.css('a#link2'));
+  }
+
+  clickLink2() {
+    browser.actions().click(this.getLink2El()).perform();
+  }
+
+  getLink3El() {
+    return element(by.css('a#link3'));
+  }
+
+  clickLink3() {
+    browser.actions().click(this.getLink3El()).perform();
+  }
+
+  getView1El() {
+    return element(by.css('div#view1'));
+  }
+
+  getView2El() {
+    return element(by.css('div#view2'));
+  }
+
+  getView3El() {
+    return element(by.css('div#view3'));
+  }
+
 }

@@ -62,4 +62,33 @@ describe('example page', () => {
     expect(page.getAppExampleTemplateContentText()).toBe('built by Anisetus Elly Efendi [Angular 4.3.6]');
   });
 
+  it('Should display header view', () => {
+    page.navigateTo();
+    expect(page.getHeaderViewText()).toBe('Angular 4 Example Route');
+  });
+
+  it('Should display view1 at first load', () => {
+    page.navigateTo();
+    expect(page.getView1El()).toBeTruthy();
+  });
+
+  it('Should display view2 after click link2', () => {
+    page.navigateTo();
+    page.clickLink2();
+    expect(page.getView2El()).toBeTruthy();
+  });
+
+  it('Should display view3 after click link3', () => {
+    page.navigateTo();
+    page.clickLink3();
+    expect(page.getView3El()).toBeTruthy();
+  });
+
+  it('Should back to view1 after click link1 from other view', () => {
+    page.navigateTo();
+    page.clickLink2();
+    page.clickLink1();
+    expect(page.getView3El()).toBeTruthy();
+  });
+
 });

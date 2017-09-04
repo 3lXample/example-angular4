@@ -51,6 +51,8 @@ describe('ExampleComponent', () => {
   let elService:  HTMLElement;
   let deComp:     DebugElement;
   let elComp:     HTMLElement;
+  let deViewHead: DebugElement;
+  let elViewHead: HTMLElement;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
@@ -82,6 +84,8 @@ describe('ExampleComponent', () => {
     elService  = deService.nativeElement;
     deComp     = fixture.debugElement.query(By.directive(MockExampleTemplateComponent));
     elComp     = deComp.nativeElement;
+    deViewHead = fixture.debugElement.query(By.css('h1#header-view'));
+    elViewHead = deViewHead.nativeElement;
   });
 
   it('Should create the component', () => {
@@ -123,6 +127,10 @@ describe('ExampleComponent', () => {
   it('Should pass down `title` to `MockExampleTemplateComponent`', () => {
     const MockComp = deComp.injector.get(MockExampleTemplateComponent);
     expect(MockComp.title).toBe(comp.title);
+  });
+
+  it('Should render view route header in view', () => {
+    expect(elViewHead.textContent).toBe('ExampleReversePipe Route');
   });
 
 });

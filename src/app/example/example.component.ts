@@ -25,3 +25,12 @@ export class ExampleComponent {
   }
 
 }
+
+@Component({ template: '<div id="view1">This is view1</div>' })
+export class View1Component {}
+
+@Component({ template: '<div id="view2">This is view2</div>' })
+export class View2Component {}
+
+@Component({ template: '<div id="view3">This is view3</div>' })
+export class View3Component {}

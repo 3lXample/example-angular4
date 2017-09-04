@@ -25,3 +25,11 @@
 </table>
 <hr/>
 <app-example-template [title]="title"></app-example-template>
+<hr>
+<h1 id="header-view">{{title | exampleReverse}} Route</h1>
+<nav>
+  <a id="link1" routerLink="/view1" routerLinkActive="active">view1</a>
+  <a id="link2" routerLink="/view2" routerLinkActive="active">view2</a>
+  <a id="link3" routerLink="/view3" routerLinkActive="active">view3</a>
+</nav>
+<router-outlet></router-outlet>
