@@ -19,4 +19,22 @@ describe('example page', () => {
     expect(page.getHeaderText()).toBe('Angular 4 Example');
   });
 
+  it('Should display appExampleAttribute', () => {
+    page.navigateTo();
+    expect(page.getAppExampleAttributeText()).toBe('Hover me!');
+  });
+
+  it('Should display appExampleAttribute with style color red when hover', () => {
+    page.navigateTo();
+    page.hoverAppExampleAttribute();
+    expect(page.getAppExampleAttributeAttrStyle()).toBe('color: red;');
+  });
+
+  it('Should display appExampleAttribute without style color after unhover', () => {
+    page.navigateTo();
+    page.hoverAppExampleAttribute();
+    page.hoverHeader();
+    expect(page.getAppExampleAttributeAttrStyle()).toBeFalsy();
+  });
+
 });

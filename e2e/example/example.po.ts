@@ -21,4 +21,24 @@ export class ExamplePage {
     return this.getHeaderEl().getText();
   }
 
+  hoverHeader() {
+    browser.actions().mouseMove(this.getHeaderEl()).perform();
+  }
+
+  getAppExampleAttributeEl() {
+    return element(by.css('span#appExampleAttribute'));
+  }
+
+  getAppExampleAttributeText() {
+    return this.getAppExampleAttributeEl().getText();
+  }
+
+  getAppExampleAttributeAttrStyle() {
+    return this.getAppExampleAttributeEl().getAttribute('style');
+  }
+
+  hoverAppExampleAttribute() {
+    browser.actions().mouseMove(this.getAppExampleAttributeEl()).perform();
+  }
+
 }

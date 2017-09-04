@@ -5,13 +5,14 @@
  * Copyright (c) 2017 3lXample (https://github.com/3lXample)
  * Licensed under the MIT license
  */
-import { NgModule }             from '@angular/core';
-import { BrowserModule }        from '@angular/platform-browser';
+import { NgModule }                  from '@angular/core';
+import { BrowserModule }             from '@angular/platform-browser';
 
-import { ExampleComponent }     from './example.component';
-import { ExampleService }       from './example.service';
-import { ExampleReversePipe }   from './example-reverse.pipe';
-import { ExampleRoutingModule } from './example-routing.module';
+import { ExampleComponent }          from './example.component';
+import { ExampleService }            from './example.service';
+import { ExampleAttributeDirective } from './example-attribute.directive';
+import { ExampleReversePipe }        from './example-reverse.pipe';
+import { ExampleRoutingModule }      from './example-routing.module';
 
 @NgModule({
   imports: [
@@ -20,6 +21,7 @@ import { ExampleRoutingModule } from './example-routing.module';
   ],
   declarations: [
     ExampleComponent,
+    ExampleAttributeDirective,
     ExampleReversePipe
   ],
   providers: [ExampleService],
