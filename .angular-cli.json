@@ -9,6 +9,7 @@
       "root": "src",
       "outDir": "build/dist/main",
       "assets": [
+        "_api",
         "_assets",
         "favicon.ico",
         ".nojekyll"
