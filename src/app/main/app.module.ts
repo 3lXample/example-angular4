@@ -11,13 +11,16 @@ import { BrowserModule }    from '@angular/platform-browser';
 import { AppComponent }     from './app.component';
 import { AppRoutingModule } from './app-routing.module';
 
+import { FooterComponent }  from './_layout/footer.component';
+
 @NgModule({
   imports: [
     BrowserModule,
     AppRoutingModule
   ],
   declarations: [
-    AppComponent
+    AppComponent,
+    FooterComponent
   ],
   providers: [],
   bootstrap: [AppComponent]
