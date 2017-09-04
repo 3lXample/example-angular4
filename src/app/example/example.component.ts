@@ -12,4 +12,6 @@ import { Component } from '@angular/core';
   templateUrl: './example.component.html',
   styleUrls: ['./example.component.scss']
 })
-export class ExampleComponent {}
+export class ExampleComponent {
+  title = 'elpmaxE 4 ralugnA';
+}
