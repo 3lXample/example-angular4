@@ -9,6 +9,7 @@ import { NgModule }                   from '@angular/core';
 import { BrowserModule }              from '@angular/platform-browser';
 
 import { ExampleComponent }           from './example.component';
+import { ExampleTemplateComponent }   from './example-template.component';
 import { ExampleService }             from './example.service';
 import { ExampleAttributeDirective }  from './example-attribute.directive';
 import { ExampleStructuralDirective } from './example-structural.directive';
@@ -22,6 +23,7 @@ import { ExampleRoutingModule }       from './example-routing.module';
   ],
   declarations: [
     ExampleComponent,
+    ExampleTemplateComponent,
     ExampleAttributeDirective,
     ExampleStructuralDirective,
     ExampleReversePipe

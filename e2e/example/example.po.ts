@@ -57,4 +57,24 @@ export class ExamplePage {
     return this.getServiceEl().getText();
   }
 
+  getAppExampleTemplateEl() {
+    return element(by.css('app-example-template'));
+  }
+
+  getAppExampleTemplateHeaderEl() {
+    return element(by.css('app-example-template h1#headerTemplate'));
+  }
+
+  getAppExampleTemplateHeaderText() {
+    return this.getAppExampleTemplateHeaderEl().getText();
+  }
+
+  getAppExampleTemplateContentEl() {
+    return element(by.css('app-example-template span#content'));
+  }
+
+  getAppExampleTemplateContentText() {
+    return this.getAppExampleTemplateContentEl().getText();
+  }
+
 }

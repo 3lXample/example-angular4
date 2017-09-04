@@ -5,14 +5,14 @@
  * Copyright (c) 2017 3lXample (https://github.com/3lXample)
  * Licensed under the MIT license
  */
-import { DebugElement, Directive, Input, Pipe, PipeTransform } from '@angular/core';
-import { TemplateRef, ViewContainerRef }                       from '@angular/core';
-import { async, ComponentFixture, TestBed }                    from '@angular/core/testing';
-import { By }                                                  from '@angular/platform-browser';
-import { RouterTestingModule }                                 from '@angular/router/testing';
+import { Component, DebugElement, Directive, Input, Pipe, PipeTransform } from '@angular/core';
+import { TemplateRef, ViewContainerRef }                                  from '@angular/core';
+import { async, ComponentFixture, TestBed }                               from '@angular/core/testing';
+import { By }                                                             from '@angular/platform-browser';
+import { RouterTestingModule }                                            from '@angular/router/testing';
 
-import { ExampleComponent }                                    from './example.component';
-import { ExampleService }                                      from './example.service';
+import { ExampleComponent }                                               from './example.component';
+import { ExampleService }                                                 from './example.service';
 
 @Pipe({ name: 'exampleReverse' })
 class MockExampleReversePipe implements PipeTransform {
@@ -33,6 +33,11 @@ class MockExampleService {
   getHeader(): string { return '3lXample Header'; }
 }
 
+@Component({ selector: 'app-example-template', template: '' })
+class MockExampleTemplateComponent {
+  @Input() title: string;
+}
+
 describe('ExampleComponent', () => {
   let comp:       ExampleComponent;
   let fixture:    ComponentFixture<ExampleComponent>;
@@ -44,6 +49,8 @@ describe('ExampleComponent', () => {
   let elStrucDir: HTMLElement;
   let deService:  DebugElement;
   let elService:  HTMLElement;
+  let deComp:     DebugElement;
+  let elComp:     HTMLElement;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
@@ -52,7 +59,8 @@ describe('ExampleComponent', () => {
         ExampleComponent,
         MockExampleReversePipe,
         MockExampleAttributeDirective,
-        MockExampleStructuralDirective
+        MockExampleStructuralDirective,
+        MockExampleTemplateComponent
       ],
       providers: [{ provide: ExampleService, useClass: MockExampleService }]
     }).compileComponents();
@@ -72,6 +80,8 @@ describe('ExampleComponent', () => {
     elStrucDir = deStrucDir.nativeElement;
     deService  = fixture.debugElement.query(By.css('span#service'));
     elService  = deService.nativeElement;
+    deComp     = fixture.debugElement.query(By.directive(MockExampleTemplateComponent));
+    elComp     = deComp.nativeElement;
   });
 
   it('Should create the component', () => {
@@ -104,6 +114,15 @@ describe('ExampleComponent', () => {
 
   it('Should render getServiceHeader in view', () => {
     expect(elService.textContent).toBe('3lXample Header');
+  });
+
+  it('Should create component `MockExampleTemplateComponent`', () => {
+    expect(elComp).toBeTruthy();
+  });
+
+  it('Should pass down `title` to `MockExampleTemplateComponent`', () => {
+    const MockComp = deComp.injector.get(MockExampleTemplateComponent);
+    expect(MockComp.title).toBe(comp.title);
   });
 
 });

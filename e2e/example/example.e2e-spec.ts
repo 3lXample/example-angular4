@@ -47,4 +47,19 @@ describe('example page', () => {
     expect(page.getServiceText()).toBe('built by Anisetus Elly Efendi [Angular 4.3.6]');
   });
 
+  it('Should display component `app-example-template`', () => {
+    page.navigateTo();
+    expect(page.getAppExampleTemplateEl()).toBeTruthy();
+  });
+
+  it('Should display header of component `app-example-template`', () => {
+    page.navigateTo();
+    expect(page.getAppExampleTemplateHeaderText()).toBe('Angular 4 Example Component');
+  });
+
+  it('Should display content of component `app-example-template`', () => {
+    page.navigateTo();
+    expect(page.getAppExampleTemplateContentText()).toBe('built by Anisetus Elly Efendi [Angular 4.3.6]');
+  });
+
 });
