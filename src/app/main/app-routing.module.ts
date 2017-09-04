@@ -11,12 +11,13 @@ import { RouterModule, Routes } from '@angular/router';
 import { HomeComponent }        from './home/home.component';
 import { PaginationComponent }  from './pagination/pagination.component';
 import { AdditionComponent }    from './addition/addition.component';
+import { SubtractionComponent } from './subtraction/subtraction.component';
 
 const routes: Routes = [
   { path: '',            component: HomeComponent, pathMatch: 'full' },
   { path: 'pagination',  component: PaginationComponent },
   { path: 'addition',    component: AdditionComponent },
-  { path: 'subtraction', component: HomeComponent },
+  { path: 'subtraction', component: SubtractionComponent },
   { path: '**',          redirectTo: '/' }
 ];
 

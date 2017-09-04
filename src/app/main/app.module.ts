@@ -5,24 +5,25 @@
  * Copyright (c) 2017 3lXample (https://github.com/3lXample)
  * Licensed under the MIT license
  */
-import { NgModule }            from '@angular/core';
-import { BrowserModule }       from '@angular/platform-browser';
-import { HttpClientModule }    from '@angular/common/http';
+import { NgModule }             from '@angular/core';
+import { BrowserModule }        from '@angular/platform-browser';
+import { HttpClientModule }     from '@angular/common/http';
 
-import { AppComponent }        from './app.component';
-import { AppRoutingModule }    from './app-routing.module';
+import { AppComponent }         from './app.component';
+import { AppRoutingModule }     from './app-routing.module';
 
-import { HeaderComponent }     from './_layout/header.component';
-import { NavComponent }        from './_layout/nav.component';
-import { FooterComponent }     from './_layout/footer.component';
+import { HeaderComponent }      from './_layout/header.component';
+import { NavComponent }         from './_layout/nav.component';
+import { FooterComponent }      from './_layout/footer.component';
 
-import { UserListComponent }   from './_components/user-list.component';
+import { UserListComponent }    from './_components/user-list.component';
 
-import { UserService }         from './_services/user.service';
+import { UserService }          from './_services/user.service';
 
-import { HomeComponent }       from './home/home.component';
-import { PaginationComponent } from './pagination/pagination.component';
-import { AdditionComponent }   from './addition/addition.component';
+import { HomeComponent }        from './home/home.component';
+import { PaginationComponent }  from './pagination/pagination.component';
+import { AdditionComponent }    from './addition/addition.component';
+import { SubtractionComponent } from './subtraction/subtraction.component';
 
 @NgModule({
   imports: [
@@ -38,7 +39,8 @@ import { AdditionComponent }   from './addition/addition.component';
     UserListComponent,
     HomeComponent,
     PaginationComponent,
-    AdditionComponent
+    AdditionComponent,
+    SubtractionComponent
   ],
   providers: [UserService],
   bootstrap: [AppComponent]
