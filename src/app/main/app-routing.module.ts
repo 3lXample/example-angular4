@@ -14,6 +14,7 @@ import { PaginationComponent }  from './pagination/pagination.component';
 const routes: Routes = [
   { path: '',           component: HomeComponent, pathMatch: 'full' },
   { path: 'pagination', component: PaginationComponent },
+  { path: 'addition',   component: HomeComponent },
   { path: '**',         redirectTo: '/' }
 ];
 

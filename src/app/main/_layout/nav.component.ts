@@ -15,6 +15,7 @@ import { Component } from '@angular/core';
 export class NavComponent {
   menus = [
     { href: '/',           icon: '_assets/3lXample_icon-20x20.png', iconAlt: 'home' },
-    { href: '/pagination', text: 'Pagination' }
+    { href: '/pagination', text: 'Pagination' },
+    { href: '/addition',   text: 'Addition' }
   ];
 }
