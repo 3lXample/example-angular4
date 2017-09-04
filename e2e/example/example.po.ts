@@ -49,4 +49,12 @@ export class ExamplePage {
     return this.getAppExampleStructuralEl().getText();
   }
 
+  getServiceEl() {
+    return element(by.css('span#service'));
+  }
+
+  getServiceText() {
+    return this.getServiceEl().getText();
+  }
+
 }

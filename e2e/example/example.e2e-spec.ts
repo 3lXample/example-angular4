@@ -42,4 +42,9 @@ describe('example page', () => {
     expect(page.getAppExampleStructuralText()).toBe('Condition is true');
   });
 
+  it('Should display service', () => {
+    page.navigateTo();
+    expect(page.getServiceText()).toBe('built by Anisetus Elly Efendi [Angular 4.3.6]');
+  });
+
 });

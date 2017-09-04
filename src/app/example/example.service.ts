@@ -16,4 +16,8 @@ export class ExampleService {
   // Add Values
   exampleValue = 'Angular 4.3.6';
 
+  getHeader(): string {
+    return ExampleService.exampleConstant + ' [' + this.exampleValue + ']';
+  }
+
 }

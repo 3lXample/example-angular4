@@ -12,6 +12,7 @@ import { By }                                                  from '@angular/pl
 import { RouterTestingModule }                                 from '@angular/router/testing';
 
 import { ExampleComponent }                                    from './example.component';
+import { ExampleService }                                      from './example.service';
 
 @Pipe({ name: 'exampleReverse' })
 class MockExampleReversePipe implements PipeTransform {
@@ -28,6 +29,10 @@ class MockExampleStructuralDirective {
   set appExampleStructural(condition) { this.viewContainer.createEmbeddedView(this.templateRef); }
 }
 
+class MockExampleService {
+  getHeader(): string { return '3lXample Header'; }
+}
+
 describe('ExampleComponent', () => {
   let comp:       ExampleComponent;
   let fixture:    ComponentFixture<ExampleComponent>;
@@ -37,6 +42,8 @@ describe('ExampleComponent', () => {
   let elAttrDir:  HTMLElement;
   let deStrucDir: DebugElement;
   let elStrucDir: HTMLElement;
+  let deService:  DebugElement;
+  let elService:  HTMLElement;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
@@ -46,7 +53,8 @@ describe('ExampleComponent', () => {
         MockExampleReversePipe,
         MockExampleAttributeDirective,
         MockExampleStructuralDirective
-      ]
+      ],
+      providers: [{ provide: ExampleService, useClass: MockExampleService }]
     }).compileComponents();
   }));
 
@@ -62,6 +70,8 @@ describe('ExampleComponent', () => {
     elAttrDir  = deAttrDir.nativeElement;
     deStrucDir = fixture.debugElement.query(By.css('span#appExampleStructural'));
     elStrucDir = deStrucDir.nativeElement;
+    deService  = fixture.debugElement.query(By.css('span#service'));
+    elService  = deService.nativeElement;
   });
 
   it('Should create the component', () => {
@@ -76,6 +86,10 @@ describe('ExampleComponent', () => {
     expect(comp.condition).toEqual({ active: true });
   });
 
+  it('GetServiceHeader should get header from service', () => {
+    expect(comp.getServiceHeader()).toBe('3lXample Header');
+  });
+
   it('Should render title in a h1 tag', () => {
     expect(elHeader.textContent).toBe('ExampleReversePipe');
   });
@@ -86,6 +100,10 @@ describe('ExampleComponent', () => {
 
   it('Should render directive appExampleStructural', () => {
     expect(elStrucDir).toBeTruthy();
+  });
+
+  it('Should render getServiceHeader in view', () => {
+    expect(elService.textContent).toBe('3lXample Header');
   });
 
 });

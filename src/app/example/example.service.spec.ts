@@ -39,6 +39,10 @@ describe('ExampleService', () => {
     expect(exampleService.exampleValue).toBe('Angular 4.3.6');
   });
 
+  it('GetHeader should return value `built by Anisetus Elly Efendi [Angular 4.3.6]`', () => {
+    expect(exampleService.getHeader()).toBe('built by Anisetus Elly Efendi [Angular 4.3.6]');
+  });
+
   describe('TestService', () => {
     let service1: TestService1;
     let service2: TestService2;
