@@ -13,5 +13,6 @@ import { Component } from '@angular/core';
   styleUrls: ['./example.component.scss']
 })
 export class ExampleComponent {
-  title = 'elpmaxE 4 ralugnA';
+  title     = 'elpmaxE 4 ralugnA';
+  condition = { active: true };
 }

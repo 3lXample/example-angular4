@@ -37,4 +37,9 @@ describe('example page', () => {
     expect(page.getAppExampleAttributeAttrStyle()).toBeFalsy();
   });
 
+  it('Should display appExampleStructural', () => {
+    page.navigateTo();
+    expect(page.getAppExampleStructuralText()).toBe('Condition is true');
+  });
+
 });

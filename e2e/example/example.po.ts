@@ -41,4 +41,12 @@ export class ExamplePage {
     browser.actions().mouseMove(this.getAppExampleAttributeEl()).perform();
   }
 
+  getAppExampleStructuralEl() {
+    return element(by.css('span#appExampleStructural'));
+  }
+
+  getAppExampleStructuralText() {
+    return this.getAppExampleStructuralEl().getText();
+  }
+
 }
