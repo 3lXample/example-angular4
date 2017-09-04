@@ -22,6 +22,7 @@ import { UserService }         from './_services/user.service';
 
 import { HomeComponent }       from './home/home.component';
 import { PaginationComponent } from './pagination/pagination.component';
+import { AdditionComponent }   from './addition/addition.component';
 
 @NgModule({
   imports: [
@@ -36,7 +37,8 @@ import { PaginationComponent } from './pagination/pagination.component';
     FooterComponent,
     UserListComponent,
     HomeComponent,
-    PaginationComponent
+    PaginationComponent,
+    AdditionComponent
   ],
   providers: [UserService],
   bootstrap: [AppComponent]
