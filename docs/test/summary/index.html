@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8"/>
+    <title>Example Angular 4 Web Unit Tests - An example of web made with Angular 4</title>
+    <style type="text/css">html,body{font-family:Arial,sans-serif;font-size:1rem;margin:0;padding:0;}body{padding:10px 40px;}h1{margin-bottom:0;}h2{margin-top:0;margin-bottom:0;color:#999;}table{width:100%;margin-top:20px;margin-bottom:20px;table-layout:fixed;}tr.header{background:#ddd;font-weight:bold;border-bottom:none;}td{padding:7px;border-top:none;border-left:1px black solid;border-bottom:1px black solid;border-right:none;word-break:break-all;word-wrap:break-word;}tr.pass td{color:#003b07;background:#86e191;}tr.skip td{color:#7d3a00;background:#ffd24a;}tr.fail td{color:#5e0e00;background:#ff9c8a;}tr:first-child td{border-top:1px black solid;}td:last-child{border-right:1px black solid;}tr.overview{font-weight:bold;color:#777;}tr.overview td{padding-bottom:0px;border-bottom:none;}tr.system-out td{color:#777;}tr.system-errors td{color:#f00;}hr{height:2px;margin:30px 0;background:#000;border:none;}section{margin-top:40px;}h3{margin:6px 0;}.overview{color:#333;font-weight:bold;}.system-out{margin:0.4rem 0;}.system-errors{color:#a94442}.spec{padding:0.8rem;margin:0.3rem 0;}.spec--pass{color:#3c763d;background-color:#dff0d8;border:1px solid #d6e9c6;}.spec--skip{color:#8a6d3b;background-color:#fcf8e3;border:1px solid #faebcc;}.spec--fail{color:#a94442;background-color:#f2dede;border:1px solid #ebccd1;}.spec--group{color:#636363;background-color:#f0f0f0;border:1px solid #e6e6e6;margin:0;}.spec--group:not(:first-of-type){margin:20px 0 0 0;}.spec__title{display:inline;}.spec__suite{display:inline;}.spec__descrip{font-weight:normal;}.spec__status{float:right;}.spec__log{padding-left: 2.3rem;}.hidden{display:none;}body.compact .spec p{margin-top:0;margin-bottom:0.5rem;}body.compact .spec,body.compact tr,body.compact .overview,body.compact .system-out,body.compact .system-errors{font-size:0.85rem;}body.compact .spec{padding:0.3rem 0.5rem;}body.compact section{margin-top:30px;}</style>
+  </head>
+  <body class="compact">
+    <h1>Example Angular 4 Web Unit Tests</h1>
+    <h2>An example of web made with Angular 4</h2>
+    <table cellspacing="0" cellpadding="0" border="0">
+      <tr class="overview">
+        <td colspan="3" title="Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/60.0.3112.101 Safari/537.36">Browser: HeadlessChrome 0.0.0 (Linux 0.0.0)</td>
+      </tr>
+      <tr class="overview">
+        <td colspan="3">Timestamp: 2017-9-5 15:15:05</td>
+      </tr>
+      <tr>
+        <td colspan="3">
+          36 tests / 
+          0 errors / 
+          0 failures / 
+          0 skipped / 
+          runtime: 2.857s
+        </td>
+      </tr>
+      <tr class="header">
+        <td>Status</td>
+        <td>Spec</td>
+        <td>Suite / Results</td>
+      </tr>
+      <tr class="pass">
+        <td>Passed in 1.359s</td>
+        <td>Should create the test component</td>
+        <td>ExampleAttributeDirective &raquo; TestComponent</td>
+      </tr>
+      <tr class="pass">
+        <td>Passed in 0.122s</td>
+        <td>Should not have style color at first display</td>
+        <td>ExampleAttributeDirective &raquo; TestComponent</td>
+      </tr>
+      <tr class="pass">
+        <td>Passed in 0.019s</td>
+        <td>Should have style color `red` when mouseenter</td>
+        <td>ExampleAttributeDirective &raquo; TestComponent</td>
+      </tr>
+      <tr class="pass">
+        <td>Passed in 0.016s</td>
+        <td>Should remove style color after mouseleave</td>
+        <td>ExampleAttributeDirective &raquo; TestComponent</td>
+      </tr>
+      <tr class="pass">
+        <td>Passed in 0s</td>
+        <td>Should transforms `elpmaXl3` to `3lXample`</td>
+        <td>ExampleReversePipe</td>
+      </tr>
+      <tr class="pass">
+        <td>Passed in 0s</td>
+        <td>Should transforms undefined to ``</td>
+        <td>ExampleReversePipe</td>
+      </tr>
+      <tr class="pass">
+        <td>Passed in 0.001s</td>
+        <td>Should transforms null to ``</td>
+        <td>ExampleReversePipe</td>
+      </tr>
+      <tr class="pass">
+        <td>Passed in 0.242s</td>
+        <td>Should create the test component</td>
+        <td>ExampleReversePipe &raquo; TestComponent</td>
+      </tr>
+      <tr class="pass">
+        <td>Passed in 0.033s</td>
+        <td>Should transforms text `elpmaXl3` to `3lXample`</td>
+        <td>ExampleReversePipe &raquo; TestComponent</td>
+      </tr>
+      <tr class="pass">
+        <td>Passed in 0.078s</td>
+        <td>Should create the test component</td>
+        <td>ExampleStructuralDirective &raquo; TestComponent</td>
+      </tr>
+      <tr class="pass">
+        <td>Passed in 0.023s</td>
+        <td>Should not display when active is `false`</td>
+        <td>ExampleStructuralDirective &raquo; TestComponent</td>
+      </tr>
+      <tr class="pass">
+        <td>Passed in 0.021s</td>
+        <td>Should do nothing when active change from `false` to `false`</td>
+        <td>ExampleStructuralDirective &raquo; TestComponent</td>
+      </tr>
+      <tr class="pass">
+        <td>Passed in 0.011s</td>
+        <td>Should be rendered in dom, when active change from `false` to `true`</td>
+        <td>ExampleStructuralDirective &raquo; TestComponent</td>
+      </tr>
+      <tr class="pass">
+        <td>Passed in 0.011s</td>
+        <td>Should do nothing when active change from `true` to `true`</td>
+        <td>ExampleStructuralDirective &raquo; TestComponent</td>
+      </tr>
+      <tr class="pass">
+        <td>Passed in 0.01s</td>
+        <td>Should be removed from dom when active change from `true` to `false`</td>
+        <td>ExampleStructuralDirective &raquo; TestComponent</td>
+      </tr>
+      <tr class="pass">
+        <td>Passed in 0.059s</td>
+        <td>Should create the component</td>
+        <td>ExampleTemplateComponent</td>
+      </tr>
+      <tr class="pass">
+        <td>Passed in 0.032s</td>
+        <td>Should have title value from input</td>
+        <td>ExampleTemplateComponent</td>
+      </tr>
+      <tr class="pass">
+        <td>Passed in 0.017s</td>
+        <td>GetContent should get header from service</td>
+        <td>ExampleTemplateComponent</td>
+      </tr>
+      <tr class="pass">
+        <td>Passed in 0.017s</td>
+        <td>Should render title in a h1 tag</td>
+        <td>ExampleTemplateComponent</td>
+      </tr>
+      <tr class="pass">
+        <td>Passed in 0.019s</td>
+        <td>Should print content in view</td>
+        <td>ExampleTemplateComponent</td>
+      </tr>
+      <tr class="pass">
+        <td>Passed in 0.128s</td>
+        <td>Should create the component</td>
+        <td>ExampleComponent</td>
+      </tr>
+      <tr class="pass">
+        <td>Passed in 0.073s</td>
+        <td>Should have title `elpmaxE 4 ralugnA`</td>
+        <td>ExampleComponent</td>
+      </tr>
+      <tr class="pass">
+        <td>Passed in 0.078s</td>
+        <td>Should have condition property</td>
+        <td>ExampleComponent</td>
+      </tr>
+      <tr class="pass">
+        <td>Passed in 0.045s</td>
+        <td>GetServiceHeader should get header from service</td>
+        <td>ExampleComponent</td>
+      </tr>
+      <tr class="pass">
+        <td>Passed in 0.043s</td>
+        <td>Should render title in a h1 tag</td>
+        <td>ExampleComponent</td>
+      </tr>
+      <tr class="pass">
+        <td>Passed in 0.06s</td>
+        <td>Should render directive appExampleAttribute</td>
+        <td>ExampleComponent</td>
+      </tr>
+      <tr class="pass">
+        <td>Passed in 0.041s</td>
+        <td>Should render directive appExampleStructural</td>
+        <td>ExampleComponent</td>
+      </tr>
+      <tr class="pass">
+        <td>Passed in 0.065s</td>
+        <td>Should render getServiceHeader in view</td>
+        <td>ExampleComponent</td>
+      </tr>
+      <tr class="pass">
+        <td>Passed in 0.058s</td>
+        <td>Should create component `MockExampleTemplateComponent`</td>
+        <td>ExampleComponent</td>
+      </tr>
+      <tr class="pass">
+        <td>Passed in 0.068s</td>
+        <td>Should pass down `title` to `MockExampleTemplateComponent`</td>
+        <td>ExampleComponent</td>
+      </tr>
+      <tr class="pass">
+        <td>Passed in 0.058s</td>
+        <td>Should render view route header in view</td>
+        <td>ExampleComponent</td>
+      </tr>
+      <tr class="pass">
+        <td>Passed in 0.021s</td>
+        <td>Should have exampleConstant with value `built by Anisetus Elly Efendi`</td>
+        <td>ExampleService</td>
+      </tr>
+      <tr class="pass">
+        <td>Passed in 0s</td>
+        <td>Should have exampleValue with value `Angular 4.3.6`</td>
+        <td>ExampleService</td>
+      </tr>
+      <tr class="pass">
+        <td>Passed in 0.001s</td>
+        <td>GetHeader should return value `built by Anisetus Elly Efendi [Angular 4.3.6]`</td>
+        <td>ExampleService</td>
+      </tr>
+      <tr class="pass">
+        <td>Passed in 0.008s</td>
+        <td>Should be provide singleton ExampleService</td>
+        <td>ExampleService &raquo; TestService</td>
+      </tr>
+      <tr class="pass">
+        <td>Passed in 0.02s</td>
+        <td>Should be able to change exampleValue value</td>
+        <td>ExampleService &raquo; TestService</td>
+      </tr>
+    </table>
+    <hr/>
+  </body>
+</html>
