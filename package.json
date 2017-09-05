@@ -27,7 +27,8 @@
     "webdriver-update": "webdriver-manager update --versions.chrome=2.29",
     "tsc": "tsc",
     "example-build": "npm run build -- --app=example -bh=/example/ -d=/example/",
-    "example-e2e": "npm run e2e -- --app=example -sp=e2e/example/**/*.e2e-spec.ts"
+    "example-e2e": "npm run e2e -- --app=example -sp=e2e/example/**/*.e2e-spec.ts",
+    "dist": "run-s clean lint tsc test example-e2e build example-build && node scripts/dist"
   },
   "dependencies": {
     "@angular/animations": "4.3.6",
