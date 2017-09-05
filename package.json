@@ -28,7 +28,10 @@
     "tsc": "tsc",
     "example-build": "npm run build -- --app=example -bh=/example/ -d=/example/",
     "example-e2e": "npm run e2e -- --app=example -sp=e2e/example/**/*.e2e-spec.ts",
-    "dist": "run-s clean lint tsc test example-e2e build example-build && node scripts/dist"
+    "dist": "run-s clean lint tsc test example-e2e build example-build && node scripts/dist",
+    "gh:build": "ng build --prod -scd --stats-json -bh=/example-angular4/ -d=/example-angular4/",
+    "gh:example-build": "npm run build -- --app=example -bh=/example-angular4/example/ -d=/example-angular4/example/",
+    "gh:dist": "run-s clean lint tsc test example-e2e gh:build gh:example-build && node scripts/dist"
   },
   "dependencies": {
     "@angular/animations": "4.3.6",
